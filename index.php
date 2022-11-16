@@ -19,7 +19,7 @@
     <div class="container mt-3">
         <div class="mb-4">
             <h2>Home</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At debitis esse facilis, fuga in officia perferendis quaerat recusandae rem sint.</p>
+            <p>THE BEST BASKETBALL SHOES EVER</p>
         </div>
 
 
@@ -32,5 +32,14 @@
 
     <!-- Bootstrap JS -->
     <script src="dist/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Image</h2>
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
 </body>
 </html>

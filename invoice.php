@@ -23,12 +23,12 @@
         const PAGE = 'invoice';
         require_once 'partials/navbar.php';
 
-        // prepare item prices (per kilogram)
+        // prepare item prices (size)
         $item_prices = [
-            'Turingan'   => 260,
-            'Galunggong' => 180,
-            'Bangus'     => 175,
-            'Pusit'      => 480
+            'Air Jordan 35'   => 12700,
+            'Nike Kobe 5 Protro' => 10500,
+            'Nike KD 13'     => 9750,
+            'Under Armour Curry Flow 8'      => 10000
         ];
 
         // prepare mode prices
@@ -37,20 +37,14 @@
             'Delivery' => 20
         ];
 
-        // prepare preparation prices
-        $preparation_prices = [
-            'Kinuskosan' => 10,
-            'Binadi'     => 15,
-            'Chopped'    => 5
-        ];
-
+       
 
         // get form inputs
         $full_name    = strip_tags($_POST['full-name']);
         $address      = strip_tags($_POST['address']);
         $mode         = $_POST['mode'];
         $item         = $_POST['item'];
-        $kilograms    = intval($_POST['kilograms']);
+        $size    = intval($_POST['size']);
         $preparations = [];
         if(isset($_POST['preparations']))
             $preparations = $_POST['preparations'];
@@ -58,7 +52,7 @@
 
         // compute
         $price      = $item_prices[$item];
-        $item_price = $price * $kilograms;
+        $item_price = $price;
         $mode_price = $mode_prices[$mode];
         $preparations_price = 0;
         foreach ($preparations as $preparation) {
@@ -94,12 +88,12 @@
                 </tr>
                 <tr>
                     <th>Item</th>
-                    <td><?= $item ?> (<b><?= $price ?></b> per kg.)</td>
+                    <td><?= $item ?> (<b><?= $price ?></b> per item)</td>
                     <td rowspan="2" class="align-middle" align="right"><?= number_format($item_price, 2) ?></td>
                 </tr>
                 <tr>
-                    <th>Weight</th>
-                    <td><b><?= $kilograms ?></b> kg.</td>
+                    <th>SIZE</th>
+                    <td><b><?= $size ?></b> cm</td>
                 </tr>
                 <?php
                     for($i=0; $i<sizeof($preparations); $i++) {
@@ -139,7 +133,7 @@
                     <input type="hidden" name="mode_price" value="<?= $mode_price ?>">
                     <input type="hidden" name="item" value="<?= $item ?>">
                     <input type="hidden" name="price" value="<?= $price ?>">
-                    <input type="hidden" name="kilogram" value="<?= $kilograms ?>">
+                    <input type="hidden" name="size" value="<?= $size ?>">
                     <?php foreach ($preparations as $preparation) { ?>
                         <input type="hidden" name="preparations[]" value="<?= $preparation ?>">
                         <input type="hidden" name="preparation_prices[]" value="<?= $preparation_prices[$preparation] ?>">

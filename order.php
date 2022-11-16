@@ -19,7 +19,7 @@
     <div class="container mt-3">
         <div class="mb-4">
             <h2>Order</h2>
-            <p>Bakal na kamo... Sana ol!</p>
+            <p>GET YOUR NBA SHOES</p>
         </div>
 
         <form method="POST" action="invoice.php">
@@ -49,44 +49,44 @@
                 </div>
             </div>
 
-            <!-- Item and Weight -->
+            <!-- Item and Size -->
             <div class="mb-3">
                 <div class="row">
                     <!-- Item -->
                     <div class="col-sm-6">
                         <label class="text-secondary fw-bold" for="civil-status">Item:</label>
                         <select class="form-control" id="item" name="item">
-                            <option value="Turingan">Turingan</option>
-                            <option value="Galunggong">Galunggong</option>
-                            <option value="Bangus">Bangus</option>
-                            <option value="Pusit">Pusit</option>
+                            <option value="Air Jordan 35">Air Jordan 35</option>
+                            <option value="Nike Kobe 5 Protro">Nike Kobe 5 Protro</option>
+                            <option value="Nike KD 13">Nike KD 13</option>
+                            <option value="Under Armour Curry Flow 8">Under Armour Curry Flow 8</option>
                         </select>
                     </div>
 
-                    <!-- Kilograms -->
+                    <!-- size -->
                     <div class="col-sm-6 mt-3 mt-sm-0">
-                        <label class="text-secondary fw-bold" for="full-name">Kilograms:</label>
-                        <input type="number" class="form-control" id="kilograms" name="kilograms" value="1" min="1" max="20">
+                        <label class="text-secondary fw-bold" for="full-name">size:</label>
+                        <input type="number" class="form-control" id="size" name="size" value="30" min="30" max="47">
                     </div>
                 </div>
 
             </div>
 
-            <!-- Preparation -->
+            <!-- COLOR -->
             <div class="mb-3">
-                <label class="text-secondary fw-bold mb-2">Preparation:</label>
+                <label class="text-secondary fw-bold mb-2">COLOR AVAILABLE</label>
                 <br>
                 <div class="form-check mb-2">
-                    <input type="checkbox" class="form-check-input" id="piolo" name="preparations[]" value="Kinuskosan">
-                    <label for="piolo" class="form-check-label">Kinuskosan</label>
+                    <input type="checkbox" class="form-check-input" id="piolo" name="COLOR AVAILABLE[]" value="RED">
+                    <label for="piolo" class="form-check-label">RED</label>
                 </div>
                 <div class="form-check mb-2">
-                    <input type="checkbox" class="form-check-input" id="liza" name="preparations[]" value="Binadi">
-                    <label for="liza" class="form-check-label">Binadi</label>
+                    <input type="checkbox" class="form-check-input" id="liza" name="COLOR AVAILABLE[]" value="BLACK">
+                    <label for="liza" class="form-check-label">BLACK</label>
                 </div>
                 <div class="form-check mb-2">
-                    <input type="checkbox" class="form-check-input" id="daniel" name="preparations[]" value="Chopped">
-                    <label for="daniel" class="form-check-label">Chopped</label>
+                    <input type="checkbox" class="form-check-input" id="daniel" name="COLOR AVAILABLE[]" value="WHITE">
+                    <label for="daniel" class="form-check-label">WHITE</label>
                 </div>
             </div>
 

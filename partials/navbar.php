@@ -2,7 +2,7 @@
 
     <nav class="navbar navbar-expand-sm bg-light">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.php">TGBP</a>
+            <a class="navbar-brand fw-bold" href="index.php">CLIFF'S NBA ACCESSORIES</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
