@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <title>Home - TGBP</title>
 
     <!-- Bootstrap CSS -->
@@ -11,6 +12,10 @@
 </head>
 <body>
 
+   
+        <div class="background_image">
+    
+     </div>
     <?php
         const PAGE = 'home';
         require_once 'partials/navbar.php';
@@ -38,8 +43,3 @@
 <html>
 <body>
 
-<h2>HTML Image</h2>
-<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
-
-</body>
-</html>

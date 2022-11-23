@@ -13,7 +13,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Receipt - TGBP</title>
-
+<body>
+    <img src="nba.jpg" alt="" srcset="">
+</body>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css">
 </head>
@@ -47,7 +49,46 @@
                 </tr>
             </thead>
             <tbody>
-                
+                <tr>
+                    <th>Mode</th>
+                    <td><?= $_POST['mode'] ?></td>
+                    <td align="right"><?= number_format($_POST['mode_price'], 2
+                    ) ?></td>
+                </tr>
+                <tr>
+                    <th>Item</th>
+                    <td><?= $_POST['item'] ?> (<b><?= $_POST['price'] ?></b> size)</td>
+                    <td rowspan="2" class="align-middle" align="right"><?= number_format(($_POST['size'] = $_POST['price']), 2) ?></td>
+                </tr>
+                <tr>
+                    <th>Weight</th>
+                    <td><b><?= $_POST['size'] ?></b> size</td>
+                </tr>
+                <?php
+                    if(isset($_POST['preparations'])) {
+                        for($i=0; $i<sizeof($_POST['preparations']); $i++) {
+                            $preparation = $_POST['preparations'][$i];
+                ?>
+                            <tr>
+                                <?php if($i === 0) { ?>
+                                    <th rowspan="<?= sizeof($_POST['preparations']) ?>">Preparations</th>
+                                <?php } ?>
+                                <td><?= $preparation ?></td>
+                                <td align="right"><?= number_format($_POST['preparation_prices'][$i], 2) ?></td>
+                            </tr>
+                    <?php } ?>
+                <?php } ?>
+            </tbody>
+            <tfoot>
+                <tr class="table-warning">
+                    <th colspan="2" class="py-3">TOTAL</th>
+                    <td align="right" class="py-3"><b><?= number_format($_POST['invoice-total'], 2) ?></b></td>
+                </tr>
+                <tr class="table-primary">
+                    <th colspan="2" class="py-3">PAYMENT</th>
+                    <td align="right" class="py-3"><b><?= number_format($_POST['payment'], 2) ?></b></td>
+                </tr>
+
                 <?php
                     // compute change
                     $change  = $_POST['payment'] - $_POST['invoice-total'];
