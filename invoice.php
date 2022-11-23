@@ -52,7 +52,8 @@
 
         // compute
         $price      = $item_prices[$item];
-        $item_price = $price;
+        $item_price = $price
+        ;
         $mode_price = $mode_prices[$mode];
         $preparations_price = 0;
         foreach ($preparations as $preparation) {

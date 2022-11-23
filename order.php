@@ -103,8 +103,3 @@
     <script src="dist/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-<body style="blue;">
-</body>
-
-
-
